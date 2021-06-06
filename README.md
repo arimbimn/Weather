@@ -1,2 +1,2 @@
 # Weather
-This contains a an aplication program about weather report
+This contains an aplication program about weather report
