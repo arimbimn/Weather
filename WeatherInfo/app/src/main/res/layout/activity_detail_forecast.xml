@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:padding="16dp"
+    tools:context=".DetailForecastActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--TextView
+            android:layout_width="175dp"
+            android:layout_height="34dp"
+            android:text="Max"
+            android:gravity="bottom"
+            android:textColor="@color/white"
+            android:textStyle="bold" /-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="219dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="119dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="100dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/maxtemp_c_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:gravity="center"
+                    android:text="@string/max_temperature"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="---------"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mintemp_c_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:gravity="center"
+                    android:text="@string/min_temperature"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/average_forecast_detail"
+                android:layout_width="103dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/average_temp"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_detail_forecast"
+                    android:layout_width="match_parent"
+                    android:layout_height="118dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/condition_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:gravity="center"
+                    android:text="@string/condition_detail"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dateDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tanggal_detail"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="9dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="171dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="@string/max_wind" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/blue"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/total_precip"/>
+
+                </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="9dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/maxwind_kph_detail"
+                    android:layout_width="171dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/max_wind"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/totalprecip_mm_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/total_precip"
+                    android:textColor="@color/blue" />
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fcDetailRecycleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_forecast_detail"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

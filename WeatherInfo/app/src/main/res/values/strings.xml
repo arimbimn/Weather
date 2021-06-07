@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Weather Info</string>
+    <string name="current">Current</string>
+    <string name="temp_c">Temperature</string>
+    <string name="cloud">Cloud</string>
+    <string name="condition">Condition</string>
+    <string name="wind">Wind</string>
+    <string name="pressure">Pressure</string>
+    <string name="precip">Precip</string>
+    <string name="humidity">Humidity</string>
+    <string name="gust">Gust</string>
+    <string name="last_update">Last Update</string>
+    <string name="location">Location</string>
+    <string name="conditionpic">conditionPic</string>
+    <string name="forecast_day">Forecast Day</string>
+    <string name="forecast_condition">Forecast Condition</string>
+    <string name="loc">lokasi</string>
+    <string name="average_temp">Average Temp</string>
+    <string name="detail_waktu">Detail Waktu</string>
+    <string name="max_temperature">Max Temperature</string>
+    <string name="min_temperature">Min Temperature</string>
+    <string name="max_wind">Max Wind</string>
+    <string name="total_precip">Total Precip</string>
+    <string name="condition_detail">Condition Detail</string>
+    <string name="tanggal_detail">Tanggal Detail</string>
+    <string name="date_forecast">Date</string>
+    <string name="average_temperature">Average Temperature</string>
+    <string name="time">Time</string>
+    <string name="time_forecast_hourly">Time Forecast Hourly</string>
+    <string name="temp_forecast_hourly">Temp Forecast Hourly</string>
+    <string name="condition_forecast_detail">Condition Forecast Detail</string>
+
+</resources>
