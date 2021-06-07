@@ -31,6 +31,9 @@ public class Current {
     @SerializedName("condition")
     private Condition condition;
 
+    @SerializedName("air_quality")
+    private AirQuality airQuality;
+
     public Condition getCondition() {
         return condition;
     }
@@ -103,5 +106,11 @@ public class Current {
         this.last_updated = last_updated;
     }
 
+    public AirQuality getAirQuality() {
+        return airQuality;
+    }
 
+    public void setAirQuality(AirQuality airQuality) {
+        this.airQuality = airQuality;
+    }
 }

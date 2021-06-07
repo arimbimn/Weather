@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_home_fragment">Hello blank fragment</string>
+    <string name="btn_to_category">Menuju Kategori</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="this_category">Ini Adalah Fragment Kategory</string>
+    <string name="category_lifestyle">Kategori Gaya Hidup</string>
+    <string name="category_name">Nama Kategori</string>
+    <string name="category_description">Deskripsi Kategori</string>
+    <string name="to_profile">Kembali Ke Profil</string>
+</resources>

@@ -29,5 +29,9 @@
     <string name="time_forecast_hourly">Time Forecast Hourly</string>
     <string name="temp_forecast_hourly">Temp Forecast Hourly</string>
     <string name="condition_forecast_detail">Condition Forecast Detail</string>
+    <string name="co">CO</string>
+    <string name="no2">NO2</string>
+    <string name="o3">O3</string>
+    <string name="so2">SO2</string>
 
 </resources>

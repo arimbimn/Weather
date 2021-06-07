@@ -14,22 +14,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!--TextView
-            android:layout_width="175dp"
-            android:layout_height="34dp"
-            android:text="Max"
-            android:gravity="bottom"
-            android:textColor="@color/white"
-            android:textStyle="bold" /-->
-
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="219dp"
+            android:layout_height="226dp"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="119dp"
+                android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="70dp"
                 android:layout_marginBottom="100dp"
@@ -37,8 +28,9 @@
 
                 <TextView
                     android:id="@+id/maxtemp_c_detail"
-                    android:layout_width="match_parent"
+                    android:layout_width="66dp"
                     android:layout_height="62dp"
+                    android:layout_gravity="right"
                     android:gravity="center"
                     android:text="@string/max_temperature"
                     android:textColor="@color/white"
@@ -46,18 +38,20 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="66dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="right"
                     android:gravity="center"
-                    android:text="---------"
+                    android:text="--------"
                     android:textColor="@color/white"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/mintemp_c_detail"
-                    android:layout_width="match_parent"
+                    android:layout_width="66dp"
                     android:layout_height="61dp"
+                    android:layout_gravity="right"
                     android:gravity="center"
                     android:text="@string/min_temperature"
                     android:textColor="@color/white"
@@ -65,29 +59,41 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/average_forecast_detail"
-                android:layout_width="103dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/average_temp"
-                android:textColor="@color/white"
-                android:textSize="50sp"
-                android:textStyle="bold" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/img_detail_forecast"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="118dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:gravity="center"
-                    tools:src="@tools:sample/avatars" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/average_forecast_detail"
+                        android:layout_width="109dp"
+                        android:layout_height="123dp"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:paddingTop="50dp"
+                        android:text="@string/average_temp"
+                        android:textColor="@color/white"
+                        android:textSize="50sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_detail_forecast"
+                        android:layout_width="118dp"
+                        android:layout_height="118dp"
+                        android:layout_gravity="left"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:gravity="center"
+                        tools:src="@tools:sample/avatars" />
+
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/condition_detail"

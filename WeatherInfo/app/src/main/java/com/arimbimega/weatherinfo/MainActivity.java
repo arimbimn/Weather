@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private final String TAG = "MainActivity";
 
-    TextView wind, pressure, precip, humidity, cloud, gust, condition, temp, update, loc;
+    TextView wind, pressure, precip, humidity, cloud, gust, condition, temp, update, loc, co, no2, o3, so2;
     ImageView imgCondition;
 
     private RecyclerView mrecyclerView;
@@ -62,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
         update = findViewById(R.id.last_update);
         loc = findViewById(R.id.loc);
         imgCondition = findViewById(R.id.condition_img);
+        co = findViewById(R.id.co_current);
+        no2 = findViewById(R.id.no2_current);
+        o3 = findViewById(R.id.o3_current);
+        so2 = findViewById(R.id.so2_current);
 
 
         mrecyclerView = (RecyclerView)findViewById(R.id.fcRecycleview);
@@ -105,6 +109,10 @@ public class MainActivity extends AppCompatActivity {
                             condition.setText(response.body().getCurrent().getCondition().getText());
                             temp.setText(response.body().getCurrent().getTemp_c());
                             update.setText(response.body().getCurrent().getLast_updated());
+                            co.setText("CO :" + " " + response.body().getCurrent().getAirQuality().getCo());
+                            no2.setText("NO2 :" + " " + response.body().getCurrent().getAirQuality().getNo2());
+                            o3.setText("O3 :" + " " + response.body().getCurrent().getAirQuality().getO3());
+                            so2.setText("SO2 :" + " " + response.body().getCurrent().getAirQuality().getSo2());
 
 
                         }
