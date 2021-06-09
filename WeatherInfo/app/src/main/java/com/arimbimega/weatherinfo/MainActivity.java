@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                             List<Forecastday> forecastdays = response.body().getForecast().getListforecastday();
-                            Log.d("cek","jumlah data" + String.valueOf(forecastdays.size()));
+                            Log.d("Checking","Data forecast masuk" + String.valueOf(forecastdays.size()));
 
                             forecastAdapter = new ForecastAdapter(forecastdays);
                             forecastAdapter.notifyDataSetChanged();
