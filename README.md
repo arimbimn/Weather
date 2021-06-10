@@ -5,4 +5,4 @@ Folder code dari aplikasi Weather Report ada pada branch `master`
 
 Link video penjelasan tentang aplikasi di google drive `https://drive.google.com/file/d/11cHN4LrCx-UlarF2wGzRhVC0IE4RGbXR/view?usp=sharing`
 
-Link video penjelasan tentang aplikasi di youtube `https://youtu.be/85Wf5_YamaI`
+Link video penjelasan tentang aplikasi di youtube `https://youtu.be/kdNLuRPY_X8`
