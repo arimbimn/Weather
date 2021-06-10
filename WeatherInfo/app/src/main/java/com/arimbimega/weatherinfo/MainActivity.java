@@ -22,7 +22,10 @@ import com.arimbimega.weatherinfo.retrofit.ApiService;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import retrofit2.Call;
@@ -33,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
     private final String TAG = "MainActivity";
 
-    TextView wind, pressure, precip, humidity, cloud, gust, condition, temp, update, loc, co, no2, o3, so2;
-    ImageView imgCondition;
+    TextView wind, pressure, precip, humidity, cloud, gust, condition, temp, update, loc, co, no2, o3, so2, ystDate, ystTemp, ystCondition;
+    ImageView imgCondition, ystConditionImg;
 
     private RecyclerView mrecyclerView;
     private ForecastAdapter forecastAdapter;
@@ -67,6 +70,11 @@ public class MainActivity extends AppCompatActivity {
         o3 = findViewById(R.id.o3_current);
         so2 = findViewById(R.id.so2_current);
 
+        ystDate = findViewById(R.id.yesterday_date);
+        ystTemp = findViewById(R.id.yesterday_temp);
+        ystCondition = findViewById(R.id.yesterday_condition);
+        ystConditionImg = findViewById(R.id.condition_img_yesterday);
+
 
         mrecyclerView = (RecyclerView)findViewById(R.id.fcRecycleview);
 
@@ -78,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
         getCurrentWeather();
         getForecastWeather();
+        getYesterdayData();
 
 
 
@@ -188,5 +197,37 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+    }
+
+    private void getYesterdayData(){
+
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, -1);
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String yesterday = dateFormat.format(cal.getTime());
+
+        Log.d(TAG, String.valueOf(yesterday));
+
+        ApiService.endPoint().getYesterdayData("history.json?key=2725bee3e3c74df88e6135501212305&q=Jakarta&dt=" + yesterday)
+                .enqueue(new Callback<ForecastModel>() {
+                    @Override
+                    public void onResponse(Call<ForecastModel> call, Response<ForecastModel> response) {
+
+                        ystDate.setText(response.body().getForecast().getListforecastday().get(0).getDate());
+                        ystTemp.setText(Double.toString(response.body().getForecast().getListforecastday().get(0).getDayForecast().getAvgtemp_c()));
+                        ystCondition.setText(response.body().getForecast().getListforecastday().get(0).getDayForecast().getConditionForecast().getText());
+
+                        Glide.with(MainActivity.this)
+                                .load("http:" + response.body().getForecast().getListforecastday().get(0).getDayForecast().getConditionForecast().getIcon())
+                                .into(ystConditionImg);
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<ForecastModel> call, Throwable t) {
+
+
+                    }
+                });
     }
 }

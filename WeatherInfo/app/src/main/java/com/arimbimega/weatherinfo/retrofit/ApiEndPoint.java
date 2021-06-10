@@ -8,6 +8,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Url;
 
 public interface ApiEndPoint {
 
@@ -16,5 +17,8 @@ public interface ApiEndPoint {
 
     @GET("forecast.json?key=2725bee3e3c74df88e6135501212305&q=Jakarta&days=3&aqi=no&alerts=no")
     Call<ForecastModel> getForecastData();
+
+    @GET
+    Call<ForecastModel> getYesterdayData(@Url String url);
 
 }
